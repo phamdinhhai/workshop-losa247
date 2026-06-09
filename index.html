@@ -1872,82 +1872,205 @@
       margin-top: 4px
     }
 
-    /* ── MOBILE ── */
+    /* ── RESPONSIVE ── */
+    @media(max-width:1100px) {
+      .demo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media(max-width:900px) {
-      .nav-links {
-        display: none
+      nav {
+        padding: 0 24px;
       }
 
+      .nav-links,
+      .nav-right,
       .nav-ham {
-        display: flex
+        display: none;
+      }
+
+      .hero,
+      .features-section,
+      .how-section,
+      .channels-section,
+      .benefit-section,
+      .demo-section,
+      .cta-section {
+        padding-left: 24px;
+        padding-right: 24px;
       }
 
       .how-steps {
         grid-template-columns: 1fr 1fr;
-        gap: 28px
+        gap: 28px;
       }
 
       .how-steps::before {
-        display: none
+        display: none;
       }
 
       .pricing-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
       .benefit-inner,
       .channels-inner {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
 
+      .channels-grid,
       .addons-grid {
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr;
       }
 
-      .pain-grid,
-      .demo-grid {
-        grid-template-columns: 1fr
+      .pain-grid {
+        grid-template-columns: 1fr;
       }
 
       .tab-panel.active {
-        flex-direction: column
+        flex-direction: column;
       }
 
       .panel-left {
         flex: none;
         border-right: none;
-        border-bottom: 1px solid var(--border)
+        border-bottom: 1px solid var(--border);
       }
 
       .panel-right {
+        border-left: none;
         border-radius: 0 0 16px 16px;
-        min-height: 280px
+        min-height: 280px;
       }
     }
 
     @media(max-width:600px) {
+      nav {
+        height: 58px;
+        padding: 0 16px;
+      }
+
+      .logo-image {
+        height: 30px;
+      }
+
+      .logo-text {
+        font-size: 1rem;
+      }
+
       .hero {
-        padding: 56px 20px 52px
+        padding: 48px 18px 46px;
       }
 
+      .hero-line {
+        font-size: clamp(1.45rem, 8vw, 2.05rem);
+      }
+
+      .hero-note,
+      .hero-sub,
+      .section-lead {
+        font-size: .86rem;
+      }
+
+      .hero-actions,
+      .demo-header,
+      .section-center {
+        margin-bottom: 28px;
+      }
+
+      .btn-outline,
+      .btn-primary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .stats-inner,
+      .how-steps,
+      .channels-grid,
+      .addons-grid,
+      .demo-grid,
       .pricing-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
-      .how-steps {
-        grid-template-columns: 1fr
+      .stat-item {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
       }
 
-      .addons-grid {
-        grid-template-columns: 1fr
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+
+      .features-section,
+      .how-section,
+      .channels-section,
+      .benefit-section,
+      .demo-section,
+      .cta-section {
+        padding: 52px 18px;
+      }
+
+      .tabs-nav {
+        justify-content: flex-start;
+      }
+
+      .tab-btn {
+        padding: 12px 14px;
+        font-size: .76rem;
+      }
+
+      .panel-left,
+      .panel-right {
+        padding: 24px 18px;
+      }
+
+      .mock-window,
+      .chat-demo {
+        max-width: 100%;
+      }
+
+      .msg-bubble,
+      .cmsg-bubble {
+        max-width: min(78vw, 260px);
+      }
+
+      .demo-card {
+        min-height: 238px;
+      }
+
+      .demo-thumb {
+        height: 96px;
+        padding: 18px;
+      }
+
+      .demo-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        font-size: 1.4rem;
+      }
+
+      .demo-body {
+        padding: 16px 18px 18px;
       }
 
       .logos-row {
-        gap: 20px 28px
+        gap: 20px 28px;
       }
 
-      nav {
-        padding: 0 20px
+      footer {
+        padding: 24px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 8px;
       }
     }
   </style>
